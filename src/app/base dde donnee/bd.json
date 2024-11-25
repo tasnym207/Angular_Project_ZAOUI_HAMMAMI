@@ -1,0 +1,332 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name_article": "casquette bleu",
+      "image_article": "Homme/casquette_bleu.png",
+      "price": 25,
+      "in_stock": true,
+      "categorie": "men",
+      "Description": "taille :xxl"
+    },
+    {
+      "id": "2",
+      "name_article": "casquette blanche",
+      "image_article": "Homme/casquette_blanc.png",
+      "price": 25,
+      "in_stock": false,
+      "categorie": "men",
+      "Description": "taille :xxl"
+    },
+    {
+      "id": "3",
+      "name_article": "jogging gris",
+      "image_article": "Homme/jogging_gris.png",
+      "price": 65,
+      "in_stock": true,
+      "categorie": "men",
+      "Description": "taille :xxl"
+    },
+    {
+      "id": "4",
+      "name_article": "chaussure noire",
+      "image_article": "Homme/chaussure_noir.png",
+      "price": 160,
+      "in_stock": true,
+      "categorie": "men",
+      "Description": "taille :xxl"
+    },
+    {
+      "id": "5",
+      "name_article": "chaussette",
+      "image_article": "Homme/chausset.png",
+      "price": 15,
+      "in_stock": false,
+      "categorie": "men",
+      "Description": "taille :xxl"
+    },
+    {
+      "id": "6",
+      "name_article": "jogging_noir",
+      "image_article": "Homme/jogging_noir.png",
+      "price": 65,
+      "in_stock": true,
+      "categorie": "men",
+      "Description": "taille :xxl"
+    },
+    {
+      "id": "7",
+      "name_article": "monteau",
+      "image_article": "Homme/monteau.png",
+      "price": 370,
+      "in_stock": true,
+      "categorie": "men",
+      "Description": "taille :xxl"
+    },
+    {
+      "id": "8",
+      "name_article": "pull",
+      "image_article": "Homme/pull.png",
+      "price": 50,
+      "in_stock": true,
+      "categorie": "men",
+      "Description": "taille :xxl"
+    },
+    {
+      "id": "9",
+      "name_article": "quechiua",
+      "image_article": "Homme/quechiua.png",
+      "price": 30,
+      "in_stock": true,
+      "categorie": "men",
+      "Description": "taille :xxl"
+    },
+    {
+      "id": "10",
+      "name_article": "t_shirt",
+      "image_article": "Homme/t_shirt.png",
+      "price": 65,
+      "in_stock": true,
+      "categorie": "men",
+      "Description": "taille :xxl"
+    },
+    {
+      "id": "11",
+      "name_article": "Sous-vetement de ski femme 100 bas noir",
+      "image_article": "femme/a1.png",
+      "price": 50,
+      "in_stock": true,
+      "categorie": "woman",
+      "Description": "taille :xxl"
+    },
+    {
+      "id": "12",
+      "name_article": "Legging coton Extensible Fitness Taille Haute avec Mesh Marron",
+      "image_article": "femme/a2.png",
+      "price": 60,
+      "in_stock": true,
+      "categorie": "woman",
+      "Description": "taille :xxl"
+    },
+    {
+      "id": "13",
+      "name_article": "T-shirt maneches longues Fitness Femme",
+      "image_article": "femme/a3.png",
+      "price": 49,
+      "in_stock": true,
+      "categorie": "woman",
+      "Description": "taille :xxl"
+    },
+    {
+      "id": "14",
+      "name_article": "Sweat Loose Fitness Femme-120 gris",
+      "image_article": "femme/a4.png",
+      "price": 99,
+      "in_stock": false,
+      "categorie": "woman",
+      "Description": "taille :xxl"
+    },
+    {
+      "id": "15",
+      "name_article": "Sweat Yoga Femme Relaxation polaire bordeaux",
+      "image_article": "femme/a5.png",
+      "price": 79,
+      "in_stock": true,
+      "categorie": "woman",
+      "Description": "taille :xxl"
+    },
+    {
+      "id": "16",
+      "name_article": "T-shirt de randonnée-NH500-Femme",
+      "image_article": "femme/a6.png",
+      "price": 45,
+      "in_stock": true,
+      "categorie": "woman",
+      "Description": "taille :xxl"
+    },
+    {
+      "id": "17",
+      "name_article": "Chaussures de running Femme Kalenji Run active GRIS-ROSE",
+      "image_article": "femme/a7.png",
+      "price": 139,
+      "in_stock": false,
+      "categorie": "woman",
+      "Description": "taille :xxl"
+    },
+    {
+      "id": "18",
+      "name_article": "Sweat running chaud col zip femme-Warm+beige",
+      "image_article": "femme/a10.png",
+      "price": 129,
+      "in_stock": true,
+      "categorie": "woman",
+      "Description": "taille :xxl"
+    },
+    {
+      "id": "19",
+      "name_article": "Sweat Loose Fitness Femme",
+      "image_article": "femme/a11.png",
+      "price": 99,
+      "in_stock": true,
+      "categorie": "woman",
+      "Description": "taille :xxl"
+    },
+    {
+      "id": "20",
+      "name_article": "Sweat Loose Fitness Femme 120 beige",
+      "image_article": "femme/a12.png",
+      "price": 789987,
+      "in_stock": "false",
+      "categorie": "woman",
+      "Description": "taille :xxl"
+    },
+    {
+      "id": "21",
+      "name_article": "Chaussettes marche sportive/nordique WS 500 Invisible Fresh rouge/orange/bleu",
+      "image_article": "enfant/a13.png",
+      "price": 28,
+      "in_stock": false,
+      "categorie": "kids",
+      "Description": "taille :xxl"
+    },
+    {
+      "id": "22",
+      "name_article": "Sweat a capuche chaud enfant-500 rose imprimé",
+      "image_article": "enfant/a14.png",
+      "price": 59,
+      "in_stock": true,
+      "categorie": "kids",
+      "Description": "taille :xxl"
+    },
+    {
+      "id": "23",
+      "name_article": "Sweat a capuche chaud enfant -500 marine imprimé",
+      "image_article": "enfant/a15.png",
+      "price": 59,
+      "in_stock": true,
+      "categorie": "kids",
+      "Description": "taille :xxl"
+    },
+    {
+      "id": "24",
+      "name_article": "Sweat a capuche coton enfant-vert kaki",
+      "image_article": "enfant/a16.png",
+      "price": 59,
+      "in_stock": true,
+      "categorie": "kids",
+      "Description": "taille :xxl"
+    },
+    {
+      "id": "25",
+      "name_article": "Veste polaire de randonnée-MH500 KID beige-enfant-2-6 ans",
+      "image_article": "enfant/a17.png",
+      "price": 99,
+      "in_stock": true,
+      "categorie": "kids",
+      "Description": "taille :xxl"
+    },
+    {
+      "id": "26",
+      "name_article": "Sweat polaire de randonnée gris foncé-enfant 7-15 ans ",
+      "image_article": "enfant/a18.png",
+      "price": 199,
+      "in_stock": true,
+      "categorie": "kids",
+      "Description": "taille :xxl"
+    },
+    {
+      "id": "27",
+      "name_article": "pontallon",
+      "image_article": "zaoui.png",
+      "price": "750",
+      "in_stock": true,
+      "categorie": "xxxxxxxl",
+      "Description": ""
+    },
+    {
+      "id": "27",
+      "name_article": "pontallon",
+      "image_article": "zaoui.png",
+      "price": "750",
+      "in_stock": true,
+      "categorie": "xxxxxxxl",
+      "Description": ""
+    },
+    {
+      "id": "27",
+      "name_article": "pontallon",
+      "image_article": "zaoui.png",
+      "price": "750",
+      "in_stock": true,
+      "categorie": "xxxxxxxl",
+      "Description": ""
+    },
+    {
+      "id": "29",
+      "name_article": "ensemble du sport",
+      "image_article": "Homme/ensemble du sport.jpg",
+      "price": "450",
+      "in_stock": true,
+      "categorie": "men",
+      "Description": "coton"
+    },
+    {
+      "id": "30",
+      "name_article": "test",
+      "image_article": "Homme/ensemble du sport.jpg",
+      "price": "25",
+      "in_stock": true,
+      "categorie": "men",
+      "Description": "coton taille xxl"
+    },
+    {
+      "id": "30",
+      "name_article": "test",
+      "image_article": "Homme/ensemble du sport.jpg",
+      "price": "25",
+      "in_stock": true,
+      "categorie": "men",
+      "Description": "coton taille xxl"
+    },
+    {
+      "id": "31",
+      "name_article": "survetement",
+      "image_article": "enfant/survetement.jpg",
+      "price": "75",
+      "in_stock": true,
+      "categorie": "kids",
+      "Description": "pratique ,cotton,12 ans"
+    }
+  ],
+  "home": [
+    {
+      "image": "acceuil/offre1.png",
+      "id": "4dc0"
+    },
+    {
+      "image": "acceuil/offre2.png",
+      "id": "8431"
+    },
+    {
+      "image": "acceuil/offre3.png",
+      "id": "554e"
+    }
+  ],
+  "logo": [
+    {
+      "image": "logo/logosite.png",
+      "id": "59af"
+    },
+    {
+      "image": "sportvibes/sportvibes.png",
+      "id": "650c"
+    }
+  ],
+  "donneeadmin": [
+    {
+      "login": "admin",
+      "password": "admin123",
+      "id": "aa1b"
+    }
+  ]
+}

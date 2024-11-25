@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Gestion des Produits</title>
+</head>
+
+<body>
+    <nav class="nav flex-column flex-sm-row mb-4">
+        
+        <div class="input-group mb-3">
+          <input class="form-control" type="text" placeholder="Rechercher Produit" [(ngModel)]="searchQuery" aria-label="Rechercher">
+          <div class="input-group-append">
+            <button class="btn btn-primary" (click)="onSearch()">Rechercher</button>
+          </div>
+        </div>
+      
+        
+        <div class="d-grid gap-2">
+          <button class="btn btn-danger btn-sm" (click)="onDisconnect()">Se déconnecter</button>
+          <button class="btn btn-secondary btn-sm" (click)="displayProductMen()">Consulter Produits Homme</button>
+          <button class="btn btn-secondary btn-sm" (click)="displayProductWomen()">Consulter Produits Femme</button>
+          <button class="btn btn-secondary btn-sm" (click)="displayProductKids()">Consulter Produits Enfants</button>
+        </div>
+      </nav>
+      
+    <div class="container mt-5">
+        <section>
+            <h2>Ajouter un Produit</h2>
+            <form [formGroup]="productForm" (ngSubmit)="onSubmit()" novalidate>
+                <div class="form-group">
+                    <label for="productId">Identifiant du produit</label>
+                    <input type="number" class="form-control" id="productId"
+                        placeholder="Entrez l'identifiant du produit" formControlName="id">
+                    @if(id?.invalid && id?.touched){
+                    <div class="alert alert-danger">
+                        L'identifiant est champ obligatoire !!
+                    </div>
+                    }
+                </div>
+                <div class="form-group">
+                    <label for="productName">Nom du produit</label>
+                    <input type="text" class="form-control" id="productName" placeholder="Entrez le nom du produit"
+                        formControlName="name_article">
+                    @if(name_article?.invalid && name_article?.touched){
+                    <div class="alert alert-danger">
+                        Le nom est un champ obligatoire!!
+                    </div>
+                    }
+                </div>
+                <div class="form-group">
+                    <label for="productImage">Image du produit</label>
+                    <input type="text" class="form-control" id="productImage"
+                        placeholder="Entrez l'URL de l'image du produit" formControlName="image_article">
+                    @if(image_article?.invalid && image_article?.touched){
+                    <div class="alert alert-danger">
+                        L'image est un champ obligatoire!!
+                    </div>
+                    }
+                </div>
+                <div class="form-group">
+                    <label for="productPrice">Prix du produit</label>
+                    <input type="text" class="form-control" id="productPrice" placeholder="Entrez le prix du produit"
+                        formControlName="price">
+                    @if(price?.invalid && price?.touched){
+                    <div class="alert alert-danger">
+                        Le prix est champ obligatoire!!
+                    </div>
+                    }
+                </div>
+                <div class="form-group">
+                    <label for="productStock"> Stock</label>
+                    <input type="text" class="form-control" id="productStock" placeholder="Entrez la quantité en stock"
+                        formControlName="in_stock">
+                    @if(in_stock?.invalid && in_stock?.touched){
+                    <div class="alert alert-danger">
+                        Ce champ est obligatoire!!
+                    </div>
+                    }
+                </div>
+                <div class="form-group">
+                    <label for="productCategory">Catégorie du produit</label>
+                    <input type="text" class="form-control" id="productCategory"
+                        placeholder="Entrez la catégorie du produit" formControlName="categorie">
+                    @if(categorie?.touched && categorie?.invalid){
+                    <div class="alert alert-danger">
+                        La categorie est un champ obligatoire!!
+                    </div>
+                    }
+                </div>
+                <div class="form-group">
+                    <label for="productCategory">Description du produit</label>
+                    <input type="text" class="form-control" id="productCategory"
+                        placeholder="Entrez la Description du produit" formControlName="Description">
+                    @if(description?.invalid && description?.touched){
+                    <div class="alert alert-danger">
+                        La description est un champ obligatoire
+                    </div>
+                    }
+                </div>
+                <button type="submit" class="btn btn-primary">Ajouter le Produit</button>
+            </form>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>Supprimer un Produit</h2>
+            <form [formGroup]="deleteForm" novalidate ngSubmit >
+                <div class="form-group">
+                    <label for="deleteProductId">Identifiant du produit</label>
+                    <input type="text" class="form-control" id="deleteProductId"
+                        placeholder="Entrez l'identifiant du produit à supprimer" formControlName="id" #productId>
+                    @if(deleteForm.get('id')?.invalid && deleteForm.get('id')?.touched){
+                    <div class="alert alert-danger">
+                        L'identifiant est champ obligatoire !!
+                    </div>
+                    }
+                </div>
+                <button type="submit" class="btn btn-danger" (click)="onSupprimeProduct(productId.value)">Supprimer le
+                    Produit</button>
+            </form>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>Modifier un Produit</h2>
+            <form [formGroup]="modifyForm" (ngSubmit)="onModifierProduct()" novalidate>
+                <div class="form-group">
+                    <label for="modifyProductId">Identifiant du produit</label>
+                    <input type="text" class="form-control" id="modifyProductId"
+                        placeholder="Entrez l'identifiant du produit à modifier" formControlName="id">
+                    @if(modifyForm.get('id')?.invalid && modifyForm.get('id')?.touched){
+                    <div class="alert alert-danger">
+                        L'identifiant est champ obligatoire !!
+                    </div>
+                    }
+                </div>
+              
+                <div class="form-group">
+                    <label for="modifyProductPrice">Prix du produit</label>
+                    <input type="text" class="form-control" id="modifyProductPrice"
+                        placeholder="Entrez le nouveau prix du produit" formControlName="price">
+                    @if(price?.invalid && price?.touched){
+                    <div class="alert alert-danger">
+                        Le prix est champ obligatoire!!
+                    </div>
+                    }
+                </div>
+                <div class="form-group">
+                    <label for="modifyProductStock">In Stock</label>
+                    <input type="text" class="form-control" id="modifyProductStock"
+                        placeholder="Entrez la nouvelle quantité en stock" formControlName="in_stock">
+                    @if(in_stock?.invalid && in_stock?.touched){
+                    <div class="alert alert-danger">
+                        Ce champ est obligatoire!!
+                    </div>
+                    }
+                </div>
+              
+                <button type="submit" class="btn btn-warning">Modifier le Produit</button>
+            </form>
+        </section>
+
+
+    </div>
+
+    <div class="container mt-5">
+        <h2>Les Produits</h2>
+    
+        <div class="row">
+            <div class="col-md-4">
+                <div class="product-card">
+                    @for ( p of lesproduitsFemme; track $index) {
+                        <img [src]="p.image_article" class="card-img-top" alt="Image du produit">
+                        <div class="card-body">
+                            <ul class="list-unstyled">
+                                <li class="card-title">Nom: {{ p.name_article | uppercase }}</li>
+                                <li class="card-text">Prix: {{ p.price }} DT</li>
+                            </ul>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+        
+        <hr>
+        
+        <div class="container mt-5">
+            <h2>Les Produits</h2>
+        
+            
+            <div class="row">
+                @for ( p of lesproduitsFemme; track $index) {
+                    <div class="col-md-4 mb-4">
+                        <div class="card shadow-sm">
+                            <img [src]="p.image_article" class="card-img-top" alt="Image du produit">
+                            <div class="card-body">
+                                <ul class="list-unstyled">
+                                    <li class="card-title">Nom: {{ p.name_article | uppercase }}</li>
+                                    <li class="card-text">Prix: {{ p.price }} DT</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+            
+            <hr>
+        
+    
+            <div class="row">
+                @for ( p of lesproduitsHomme; track $index) {
+                    <div class="col-md-4 mb-4">
+                        <div class="card shadow-sm">
+                            <img [src]="p.image_article" class="card-img-top" alt="Image du produit">
+                            <div class="card-body">
+                                <ul class="list-unstyled">
+                                    <li class="card-title">Nom: {{ p.name_article | uppercase }}</li>
+                                    <li class="card-text">Prix: {{ p.price }} DT</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+            
+            <hr>
+        
+            
+            <div class="row">
+                @for ( p of lesproduitsEnfant; track $index) {
+                    <div class="col-md-4 mb-4">
+                        <div class="card shadow-sm">
+                            <img [src]="p.image_article" class="card-img-top" alt="Image du produit">
+                            <div class="card-body">
+                                <ul class="list-unstyled">
+                                    <li class="card-title">Nom: {{ p.name_article | uppercase }}</li>
+                                    <li class="card-text">Prix: {{ p.price }} DT</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+        

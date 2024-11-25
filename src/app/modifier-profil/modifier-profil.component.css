@@ -1,0 +1,39 @@
+img{
+    height:250px;
+    width: 250px;
+    
+    
+}
+#div1{
+    display: flex;
+    align-items: center;
+   
+}
+h1{
+
+    
+    text-align: center;
+    font-size:xxx-large;
+    color:rgb(18, 18, 192);
+    animation: clignote 1s infinite;
+    font-weight: bold;
+}
+@keyframes clignote {
+    0%, 100% { color: black; }
+    50% { color: blue;}
+}
+body{
+    background-color: rgb(210, 239, 249);
+}
+h2{
+    text-align: center;
+}
+#div2{
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+#img2{
+    height: 500px;
+    width: 500px;
+}

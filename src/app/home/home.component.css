@@ -1,0 +1,118 @@
+h1 {
+    font-size: 2rem;
+    text-align: center;
+    animation: changerTexte 4s linear infinite;
+    background-color: lightgray;
+    height:50px;
+  }
+
+  @keyframes changerTexte {
+    0%{
+        content:"Telecharger notre application des maintenant!";
+    }
+    50%{
+        content:"Passez votre commande sur WhatsApp";
+    }
+    100%{
+        content:"Livraisoon gratuite a partir de 150 TND d'achat"
+    }
+
+  }
+  
+  h1::after {
+    content: "Telecharger notre application des maintenant!";
+    animation: changerTexte 4s linear infinite;
+  }
+  #btn{
+    display: flex;
+    justify-content: space-around;
+  }
+  button{
+    border-radius: 8px;
+    
+    border: 2px solid darkblue;
+  }
+
+  :host {
+    display: block;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  
+  .product-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 10px;
+    width: calc(33.333% - 20px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .product-card:hover {
+    transform: translateY(-5px);
+  }
+  
+
+  .product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+  
+  
+  .product-card li {
+    margin-bottom: 5px;
+  }
+  
+  
+  .product-card button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .product-card button:hover {
+    background-color: #0056b3;
+  }
+  
+  
+  @media (max-width: 768px) {
+    .product-card {
+      width: calc(50% - 20px);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .product-card {
+      width: 100%;
+    }
+  }
+  h2{
+    text-align: center;
+    animation: clignote 1s infinite;
+    font-weight: bold;
+}
+@keyframes clignote {
+    0%, 100% { color: black; }
+    50% { color: blue;}
+}

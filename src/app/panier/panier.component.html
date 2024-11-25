@@ -1,0 +1,39 @@
+
+<div class="container panier-container">
+    <h2 class="text-center my-4">Mon Panier</h2>
+  
+    <div class="alert alert-warning text-center">
+        @if(produitsajoutee.length==0)
+        {
+            <p>Votre panier est vide.</p>
+        }
+      
+    </div>
+  
+    <div  class="row">
+        @for(produit of produitsajoutee;track $index)
+        {
+          <div class="card">
+            <img [src]="produit.image_article" alt="{{ produit.name_article }}" class="card-img-top" style="max-height: 200px; max-width:200px;">
+            <div class="card-body">
+                <h5 class="card-title">{{ produit.name_article }}</h5>
+                <p class="card-text">Prix : {{ produit.price | priceDT }}</p>
+                <div class="form-group">
+                  <label for="">quantite </label>
+                  <input type="text" id="qte-{{ $index }}" #qte (input)="calculerTotal()" required>
+                  <p>donner la quantite que vous voulez</p>
+                </div>
+                <button class="btn btn-danger" (click)="supprimerDuPanier(produit)">Supprimer</button>
+            </div>
+        </div>
+   
+          
+        }
+      </div>
+      </div>
+      
+  
+      <div class="total">
+        <h3>Total : {{ calculerTotal() | priceDT }}</h3> 
+      </div>
+  

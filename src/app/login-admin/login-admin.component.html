@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion</title>
+</head>
+<body>
+
+<header>
+    <div class="container">
+        
+        <i class="bi bi-house" > 
+   
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+                <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z"/>
+              </svg> <span (click)="naviguerVersHome()">Retour au site</span>
+        </i>
+
+        <img [src]="logoSiteImage" alt="Logo Site" width="400px" height="250px">
+    
+       
+    </div>
+</header>
+
+<section class="container mt-5">
+
+        <img [src]="loginvibe" alt="Login Vibe">
+    
+   
+    <div>
+        <h2 class="text-center">Se connecter</h2>
+        <form action="" class="mt-4">
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" placeholder="exemple@gmail.com">
+            </div>
+            <div class="form-group">
+                <label for="mdp">Mot De Passe:</label>
+                <input type="password" class="form-control" id="mdp" >
+            </div>
+            <button type="submit" class="btn btn-primary btn-block" >Se connecter</button>
+        </form>
+        <p>Si vous n'avez pas de compte, <a (click)="naviguerVersCreerProfil()" class="btn btn-primary">Créer compte</a></p>
+    </div>
+
+</section>
+
+    
+</body>
+</html>

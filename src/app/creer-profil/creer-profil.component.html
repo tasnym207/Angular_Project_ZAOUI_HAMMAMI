@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CreeerProfil</title>
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <i class="bi bi-house" >
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+                <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z"/>
+              </svg> <span (click)="naviguerVersHome()">Retour au site</span>
+        </i>
+
+        <img src="logo/logosite.png" alt="Logo Site" width="400px" height="250px">
+
+
+    </div>
+</header>
+
+<section class="container mt-5">
+
+        <img src="sportvibes/sportvibes.png" alt="Login Vibe">
+
+
+        <div class="container mt-5">
+            <form  class=" mt-4" [formGroup]="productForm" ngSubmit>
+                <h2 class="text-center">CREER VOTRE PROFIL</h2>
+                <div class="form-group">
+                    <label for="nom">NOM:</label>
+                    <input type="text" id="nom" formControlName="nom" placeholder="SPORTSVIBE" class="form-control">
+                    @if(nom?.invalid &&nom?.touched){
+                      <div class="alert alert-danger">
+                          Le nom est champ obligatoire !!
+                      </div>
+                    }
+                </div>
+                <div  class="form-group">
+                    <label for="prenom">PRENOM:</label>
+                    <input type="text" id="prenom" formControlName="prenom" placeholder="SPORTSVIBE" class="form-control">
+                    @if(prenom?.invalid &&prenom?.touched){
+                      <div class="alert alert-danger">
+                          Le prenom est champ obligatoire !!
+                      </div>
+                    }
+                </div>
+                <div  class="form-group">
+                    <label for="email">EMAIL:</label>
+                    <input type="email" id="email" formControlName="email" placeholder="SPORTSVIBE@gmail.com" class="form-control">
+                    @if(email?.invalid &&email?.touched){
+                      <div class="alert alert-danger">
+                          L'email est champ obligatoire !!
+                      </div>
+                    }
+                </div>
+                <div  class="form-group">
+                    <label for="">Mot de passe</label>
+                    <input type="password" id="mdp" formControlName="mdp" placeholder="********************" class="form-control">
+                    @if(mdp?.invalid &&mdp?.touched){
+                      <div class="alert alert-danger">
+                          Le mot de passe est champ obligatoire !!
+                      </div>
+                    }
+                </div>
+                <button type="submit" class="btn btn-primary btn-block" (click)="onnaviguerVersCompte()">Envoyer</button>
+            </form>
+        </div>
+
+</section>
+
+
+</body>
+</html>

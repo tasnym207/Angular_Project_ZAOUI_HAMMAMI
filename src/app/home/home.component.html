@@ -1,0 +1,52 @@
+
+<h1></h1>
+<div class="row">
+    @for(image of lesimages; track $index)
+    {
+        <div class="col-md-4 mb-4 d-flex align-items-stretch">
+            <div class="card h-100 shadow-sm">
+                <img [src]="image.image" alt="" class="card-img-top">
+            </div>
+            
+        </div>
+        
+    }
+</div>
+<div id="btn">
+                <button  class="btn btn-primary" routerLinkActive="active" routerLink="/femme">Decouvrer notre selection pour Femme</button>
+                <button  class="btn btn-primary"  routerLinkActive="active" routerLink="/homme">Decouvrer notre selection pour Homme </button>
+                <button  class="btn btn-primary" routerLinkActive="active" routerLink="/enfant">Decouvrer notre selection pour Enfant</button>
+</div>
+<br>
+<video src="video.mp4"  width="1200px" height="600px" autoplay loop></video>
+<br> <br>
+<h2>Nos Produits</h2>
+<ul>
+    @for(p of lesproduitsFemme;track $index){
+        <div class="product-card">
+       
+            <img [src]="p.image_article" alt="">
+            <li>Nom:{{p.name_article|uppercase}}</li>
+            <li>Prix:{{p.price |priceDT}}</li>
+            </div>}
+        </ul>
+
+        <ul>
+            @for(p of lesproduitsHomme;track $index){
+                <div class="product-card">
+               
+                    <img [src]="p.image_article" alt="">
+                    <li>Nom:{{p.name_article|uppercase}}</li>
+                    <li>Prix:{{p.price |priceDT}}</li>
+                    </div>}
+                </ul>
+
+                <ul>
+                    @for(p of lesproduitsEnfant;track $index){
+                        <div class="product-card">
+                       
+                            <img [src]="p.image_article" alt="">
+                            <li>Nom:{{p.name_article|uppercase}}</li>
+                            <li>Prix:{{p.price |priceDT}}</li>
+                            </div>}
+                        </ul>

@@ -1,0 +1,16 @@
+<div>
+    <ul>
+        @for (product of lesproduits; track product.id) {
+            <div class="product-card">
+                <img [src]="product.image_article" alt="" (click)="toggleDetail(product.id)"  style="max-height: 250px; max-width:200px;">
+                <li>Nom: {{product.name_article}}</li> 
+                <li>Prix: {{product.price |priceDT}}</li> 
+                <li><input type="checkbox" name="" id="" [checked]="product.in_stock"> disponible</li>
+                @if(selectedProductId === product.id){
+                    <button [routerLink]="['/homme', product.id]">Détail</button>
+                }
+                <button (click)="ajouterProduitAuPanier(product)">Ajouter au panier</button>
+            </div>
+        }
+    </ul>
+</div>

@@ -1,0 +1,18 @@
+
+<ul>
+    @for(p of products;track $index){
+        <div class="product-card">
+       
+            <img [src]="p.image_article" alt="" (click)="toggleDetail(p.id)" style="max-height: 250px; max-width:200px;">
+            <li>Nom:{{p.name_article}}</li>
+            <li>Prix:{{p.price |priceDT}}</li>
+            <li><input type="checkbox" name="" id="" [checked]="p.in_stock"> disponible</li>
+            @if(selectedProductId === p.id){
+                <button [routerLink]="['/femme', p.id]">Détail</button>
+            }
+            <button (click)="ajouterProduitAuPanier(p)">Ajouter au panier</button>
+
+    </div>
+    }
+</ul>
+
